@@ -1,16 +1,32 @@
+drop database if exists guerraRazas;
 CREATE DATABASE guerraRazas;
 USE guerraRazas;
 
 CREATE TABLE weapons (
 	weapon_id INT PRIMARY KEY AUTO_INCREMENT,
 	weapon_name VARCHAR(50),
-	weapon_image_path VARCHAR(200)
-	); 
+	weapon_image_path VARCHAR(200),
+	strength INT,
+	speed INT,
+	weapon_race VARCHAR(200)
+	); 	
+
+CREATE TABLE races (
+	race_id INT PRIMARY KEY auto_increment,
+    	race_name VARCHAR(50),
+    	hp INT,
+    	strength INT,
+    	speed INT,
+    	agility INT,
+    	defense INT
+    	);
 	
 CREATE TABLE warriors (
 	warrior_id INT PRIMARY KEY AUTO_INCREMENT,
 	warrior_name VARCHAR(50),
-	warrior_image_path VARCHAR(200)
+	warrior_image_path VARCHAR(200),
+    	race_id INT,
+    	CONSTRAINT fk_RACE FOREIGN KEY (race_id) REFERENCES races(race_id)
 	);
 	
 CREATE TABLE players (
@@ -41,16 +57,26 @@ CREATE TABLE battle (
 	CONSTRAINT fk_OPPONENT FOREIGN KEY (opponent_id) REFERENCES warriors (warrior_id),
 	CONSTRAINT fk_OPP_WARRIOR FOREIGN KEY (opponent_weapon_id) REFERENCES weapons (weapon_id)
 	);
-	
-INSERT INTO warriors(warrior_name, warrior_image_path) VALUES('Raiden','/ImagenesProjecto/Personajes/Raiden.png');
-INSERT INTO warriors(warrior_name, warrior_image_path) VALUES('Mileena','/ImagenesProjecto/Personajes/Mileena.png'); 
-INSERT INTO warriors(warrior_name, warrior_image_path) VALUES('Vega','/ImagenesProjecto/Personajes/Vega.png');
-INSERT INTO warriors(warrior_name, warrior_image_path) VALUES('Juri Han','/ImagenesProjecto/Personajes/Juri_Han.png'); 
-INSERT INTO warriors(warrior_name, warrior_image_path) VALUES('Baraka','/ImagenesProjecto/Personajes/Baraka.png'); 
-INSERT INTO warriors(warrior_name, warrior_image_path) VALUES('Sagat','/ImagenesProjecto/Personajes/Sagat.png'); 
-INSERT INTO warriors(warrior_name, warrior_image_path) VALUES('Mokap','/ImagenesProjecto/Personajes/Mokap.png'); 
-INSERT INTO warriors(warrior_name, warrior_image_path) VALUES('Briggs','/ImagenesProjecto/Personajes/Briggs.png'); 
-INSERT INTO warriors(warrior_name, warrior_image_path) VALUES('Cyrax','/ImagenesProjecto/Personajes/Cyrax.png');  
+
+CREATE TABLE ranking (
+	player_id INT,
+	total_points INT,
+	warrior_id INT,
+	CONSTRAINT fk_PLAYER_2 FOREIGN KEY (player_id) REFERENCES players (player_id)
+	);
+
+INSERT INTO races(race_name) VALUES("Human");
+INSERT INTO races(race_name) VALUES("Elf");
+INSERT INTO races(race_name) VALUES("Dwarf");
+INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Raiden','/ImagenesProjecto/Personajes/Raiden.png',1);
+INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Mileena','/ImagenesProjecto/Personajes/Mileena.png',1); 
+INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Vega','/ImagenesProjecto/Personajes/Vega.png',1);
+INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Juri Han','/ImagenesProjecto/Personajes/Juri_Han.png',2); 
+INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Baraka','/ImagenesProjecto/Personajes/Baraka.png',2); 
+INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Sagat','/ImagenesProjecto/Personajes/Sagat.png',2); 
+INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Mokap','/ImagenesProjecto/Personajes/Mokap.png',3); 
+INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Briggs','/ImagenesProjecto/Personajes/Briggs.png',3); 
+INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Cyrax','/ImagenesProjecto/Personajes/Cyrax.png',3);  
 INSERT INTO weapons(weapon_name,weapon_image_path) VALUES('Dagger','/ImagenesProjecto/Armas/Dagger.jpg');
 INSERT INTO weapons(weapon_name,weapon_image_path) VALUES('Sword','/ImagenesProjecto/Armas/Sword.jpg');
 INSERT INTO weapons(weapon_name,weapon_image_path) VALUES('Hatchet','/ImagenesProjecto/Armas/Hatchet.jpg');
