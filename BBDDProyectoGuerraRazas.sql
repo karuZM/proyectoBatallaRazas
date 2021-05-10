@@ -1,40 +1,40 @@
 CREATE DATABASE guerraRazas;
 USE guerraRazas;
 
-CREATE OR REPLACE TABLE weapons (
-	weapon_id NUMBER PRIMARY KEY AUTO_INCREMENT,
-	weapon_name VARCHAR2(50),
-	weapon_image_path VARCHAR2(200)
+CREATE TABLE weapons (
+	weapon_id INT PRIMARY KEY AUTO_INCREMENT,
+	weapon_name VARCHAR(50),
+	weapon_image_path VARCHAR(200)
 	); 
 	
-CREATE OR REPLACE TABLE warriors (
-	warrior_id NUMBER PRIMARY KEY AUTO_INCREMENT,
-	warrior_name VARCHAR2(50),
-	warrior_image_path VARHCAR2(200)
+CREATE TABLE warriors (
+	warrior_id INT PRIMARY KEY AUTO_INCREMENT,
+	warrior_name VARCHAR(50),
+	warrior_image_path VARCHAR(200)
 	);
 	
-CREATE OR REPLACE TABLE players (
-	player_id NUMBER PRIMARY KEY AUTO_INCREMENT,
-	player_name VARCHAR2(50)
+CREATE TABLE players (
+	player_id INT PRIMARY KEY AUTO_INCREMENT,
+	player_name VARCHAR(50)
 	);
 	
-CREATE OR REPLACE TABLE weapons_available (
-	warrior_id NUMBER,
-	weapon_id NUMBER,
+CREATE TABLE weapons_available (
+	warrior_id INT,
+	weapon_id INT,
 	CONSTRAINT fk_WARRIOR FOREIGN KEY (warrior_id) REFERENCES warriors (warrior_id),
 	CONSTRAINT fk_WEAPON FOREIGN KEY (weapon_id) REFERENCES weapons (weapon_id)
 	);
 	
-CREATE OR REPLACE TABLE battle (
-	battle_id NUMBER PRIMARY KEY AUTO_INCREMENT,
-	player_id NUMBER,
-	warrior_id NUMBER,
-	warrior_weapon_id NUMBER,
-	opponent_id NUMBER,
-	opponent_weapon_id NUMBER,
-	injuries_caused NUMBER,
-	injuries_suffered NUMBER,
-	battle_points NUMBER,
+CREATE TABLE battle (
+	battle_id INT PRIMARY KEY AUTO_INCREMENT,
+	player_id INT,
+	warrior_id INT,
+	warrior_weapon_id INT,
+	opponent_id INT,
+	opponent_weapon_id INT,
+	injuries_caused INT,
+	injuries_suffered INT,
+	battle_points INT,
 	CONSTRAINT fk_PLAYER FOREIGN KEY (player_id) REFERENCES players (player_id),
 	CONSTRAINT fk_WARRIOR FOREIGN KEY (warrior_id) REFERENCES warriors (warrior_id),
 	CONSTRAINT fk_WEAPON FOREIGN KEY (warrior_weapon_id) REFERENCES weapons (weapon_id),
