@@ -21,8 +21,8 @@ CREATE TABLE players (
 CREATE TABLE weapons_available (
 	warrior_id INT,
 	weapon_id INT,
-	CONSTRAINT fk_WARRIOR FOREIGN KEY (warrior_id) REFERENCES warriors (warrior_id),
-	CONSTRAINT fk_WEAPON FOREIGN KEY (weapon_id) REFERENCES weapons (weapon_id)
+	CONSTRAINT fk_WARRIOR_2 FOREIGN KEY (warrior_id) REFERENCES warriors (warrior_id),
+	CONSTRAINT fk_WEAPON_2 FOREIGN KEY (weapon_id) REFERENCES weapons (weapon_id)
 	);
 	
 CREATE TABLE battle (
@@ -36,8 +36,8 @@ CREATE TABLE battle (
 	injuries_suffered INT,
 	battle_points INT,
 	CONSTRAINT fk_PLAYER FOREIGN KEY (player_id) REFERENCES players (player_id),
-	CONSTRAINT fk_WARRIOR FOREIGN KEY (warrior_id) REFERENCES warriors (warrior_id),
-	CONSTRAINT fk_WEAPON FOREIGN KEY (warrior_weapon_id) REFERENCES weapons (weapon_id),
+	CONSTRAINT fk_WARRIOR_3 FOREIGN KEY (warrior_id) REFERENCES warriors (warrior_id),
+	CONSTRAINT fk_WEAPON_3 FOREIGN KEY (warrior_weapon_id) REFERENCES weapons (weapon_id),
 	CONSTRAINT fk_OPPONENT FOREIGN KEY (opponent_id) REFERENCES warriors (warrior_id),
 	CONSTRAINT fk_OPP_WARRIOR FOREIGN KEY (opponent_weapon_id) REFERENCES weapons (weapon_id)
 	);
