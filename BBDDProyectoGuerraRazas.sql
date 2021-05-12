@@ -48,8 +48,6 @@ CREATE TABLE battle (
 	warrior_weapon_id INT,
 	opponent_id INT,
 	opponent_weapon_id INT,
-	injuries_caused INT,
-	injuries_suffered INT,
 	battle_points INT,
 	CONSTRAINT fk_PLAYER FOREIGN KEY (player_id) REFERENCES players (player_id),
 	CONSTRAINT fk_WARRIOR_3 FOREIGN KEY (warrior_id) REFERENCES warriors (warrior_id),
@@ -57,6 +55,13 @@ CREATE TABLE battle (
 	CONSTRAINT fk_OPPONENT FOREIGN KEY (opponent_id) REFERENCES warriors (warrior_id),
 	CONSTRAINT fk_OPP_WARRIOR FOREIGN KEY (opponent_weapon_id) REFERENCES weapons (weapon_id)
 	);
+CREATE TABLE rounds (
+	round_id INT PRIMARY KEY AUTO_INCREMENT,
+    battle_id INT,
+    injuries_caused INT,
+    injuries_suffered INT,
+    CONSTRAINT fk_BATTLE FOREIGN KEY (battle_id) REFERENCES battle (battle_id)
+    );
 
 CREATE TABLE ranking (
 	player_id INT,
