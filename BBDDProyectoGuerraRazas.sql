@@ -83,12 +83,12 @@ INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Mokap','
 INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Briggs','ImagenesProjecto/Personajes/Briggs.png',3); 
 INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Cyrax','ImagenesProjecto/Personajes/Cyrax.png',3);
   
-INSERT INTO weapons(weapon_name,weapon_image_path,strenght,speed,weapon_race) VALUES('Dagger','ImagenesProjecto/Armas/Dagger.jpg',0,3,'Human,Elf');
-INSERT INTO weapons(weapon_name,weapon_image_path,strenght,speed,weapon_race) VALUES('Sword','ImagenesProjecto/Armas/Sword.jpg',1,1,'Human,Elf,Dwarf');
-INSERT INTO weapons(weapon_name,weapon_image_path,strenght,speed,weapon_race) VALUES('Hatchet','ImagenesProjecto/Armas/Hatchet.jpg',3,0,'Human,Dwarf');
-INSERT INTO weapons(weapon_name,weapon_image_path,strenght,speed,weapon_race) VALUES('Double Swords','ImagenesProjecto/Armas/Double_Swords.jpg',2,2,'Human,Elf');
-INSERT INTO weapons(weapon_name,weapon_image_path,strenght,speed,weapon_race) VALUES('Scimitar','ImagenesProjecto/Armas/Scimitar.jpg',1,2,'Human,Elf');
-INSERT INTO weapons(weapon_name,weapon_image_path,strenght,speed,weapon_race) VALUES('Bow','ImagenesProjecto/Armas/Arco.png',1,5,'Elf');
-INSERT INTO weapons(weapon_name,weapon_image_path,strenght,speed,weapon_race) VALUES('Katana','ImagenesProjecto/Armas/Katana.jpg',2,3,'Human');
-INSERT INTO weapons(weapon_name,weapon_image_path,strenght,speed,weapon_race) VALUES('Poniard','ImagenesProjecto/Armas/Poniard.jpg',0,4,'Human,Elf,Dwarf');
-INSERT INTO weapons(weapon_name,weapon_image_path,strenght,speed,weapon_race) VALUES('Two Handed Hatchet','ImagenesProjecto/Armas/Two_Handed_Axe.jpg',5,0,'Dwarf');
+INSERT INTO weapons(weapon_name,weapon_image_path,strength,speed,weapon_race) VALUES('Dagger','ImagenesProjecto/Armas/Dagger.jpg',0,3,'Human,Elf');
+INSERT INTO weapons(weapon_name,weapon_image_path,strength,speed,weapon_race) VALUES('Sword','ImagenesProjecto/Armas/Sword.jpg',1,1,'Human,Elf,Dwarf');
+INSERT INTO weapons(weapon_name,weapon_image_path,strength,speed,weapon_race) VALUES('Hatchet','ImagenesProjecto/Armas/Hatchet.jpg',3,0,'Human,Dwarf');
+INSERT INTO weapons(weapon_name,weapon_image_path,strength,speed,weapon_race) VALUES('Double Swords','ImagenesProjecto/Armas/Double_Swords.jpg',2,2,'Human,Elf');
+INSERT INTO weapons(weapon_name,weapon_image_path,strength,speed,weapon_race) VALUES('Scimitar','ImagenesProjecto/Armas/Scimitar.jpg',1,2,'Human,Elf');
+INSERT INTO weapons(weapon_name,weapon_image_path,strength,speed,weapon_race) VALUES('Bow','ImagenesProjecto/Armas/Arco.png',1,5,'Elf');
+INSERT INTO weapons(weapon_name,weapon_image_path,strength,speed,weapon_race) VALUES('Katana','ImagenesProjecto/Armas/Katana.jpg',2,3,'Human');
+INSERT INTO weapons(weapon_name,weapon_image_path,strength,speed,weapon_race) VALUES('Poniard','ImagenesProjecto/Armas/Poniard.jpg',0,4,'Human,Elf,Dwarf');
+INSERT INTO weapons(weapon_name,weapon_image_path,strength,speed,weapon_race) VALUES('Two Handed Hatchet','ImagenesProjecto/Armas/Two_Handed_Axe.jpg',5,0,'Dwarf');
