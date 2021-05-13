@@ -83,12 +83,12 @@ INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Mokap','
 INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Briggs','ImagenesProjecto/Personajes/Briggs.png',3); 
 INSERT INTO warriors(warrior_name, warrior_image_path, race_id) VALUES('Cyrax','ImagenesProjecto/Personajes/Cyrax.png',3);
   
-INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Dagger','ImagenesProjecto/Armas/Dagger.jpg','Human, Elf');
-INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Sword','ImagenesProjecto/Armas/Sword.jpg','Human, Elf, Dwarf');
-INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Hatchet','ImagenesProjecto/Armas/Hatchet.jpg','Human, Dwarf');
-INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Double Swords','ImagenesProjecto/Armas/Double_Swords.jpg','Human, Elf');
-INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Scimitar','ImagenesProjecto/Armas/Scimitar.jpg','Human, Elf');
+INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Dagger','ImagenesProjecto/Armas/Dagger.jpg','Human,Elf');
+INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Sword','ImagenesProjecto/Armas/Sword.jpg','Human,Elf,Dwarf');
+INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Hatchet','ImagenesProjecto/Armas/Hatchet.jpg','Human,Dwarf');
+INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Double Swords','ImagenesProjecto/Armas/Double_Swords.jpg','Human,Elf');
+INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Scimitar','ImagenesProjecto/Armas/Scimitar.jpg','Human,Elf');
 INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Bow','ImagenesProjecto/Armas/Arco.png','Elf');
 INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Katana','ImagenesProjecto/Armas/Katana.jpg','Human');
-INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Poniard','ImagenesProjecto/Armas/Poniard.jpg','Human, Elf, Dwarf');
+INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Poniard','ImagenesProjecto/Armas/Poniard.jpg','Human,Elf,Dwarf');
 INSERT INTO weapons(weapon_name,weapon_image_path,weapon_race) VALUES('Two Handed Hatchet','ImagenesProjecto/Armas/Two_Handed_Axe.jpg','Dwarf');
