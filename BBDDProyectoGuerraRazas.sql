@@ -60,7 +60,9 @@ CREATE TABLE rounds (
     battle_id INT,
     injuries_caused INT,
     injuries_suffered INT,
-    CONSTRAINT fk_BATTLE FOREIGN KEY (battle_id) REFERENCES battle (battle_id)
+    player_id INT,
+    CONSTRAINT fk_BATTLE FOREIGN KEY (battle_id) REFERENCES battle (battle_id),
+    CONSTRAINT fk_PLAYER2 FOREIGN KEY (player_id) references players(player_id)
     );
 
 CREATE TABLE ranking (
