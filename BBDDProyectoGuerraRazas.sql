@@ -57,6 +57,7 @@ CREATE TABLE battle (
 	);
 
 CREATE TABLE ranking (
+	ranking_id INT PRIMARY KEY AUTO_INCREMENT,
 	player_id INT,
 	total_points INT,
 	warrior_id INT,
