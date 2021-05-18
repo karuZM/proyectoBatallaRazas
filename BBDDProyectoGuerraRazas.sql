@@ -1,6 +1,6 @@
-drop database if exists guerraRazas;
-CREATE DATABASE guerraRazas;
-USE guerraRazas;
+drop database if exists warOfRaces;
+CREATE DATABASE warOfRaces;
+USE warOfRaces;
 
 CREATE TABLE weapons (
 	weapon_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -48,6 +48,8 @@ CREATE TABLE battle (
 	warrior_weapon_id INT,
 	opponent_id INT,
 	opponent_weapon_id INT,
+    injuries_caused INT,
+    injuries_suffered INT,
 	battle_points INT,
 	CONSTRAINT fk_PLAYER FOREIGN KEY (player_id) REFERENCES players (player_id),
 	CONSTRAINT fk_WARRIOR_3 FOREIGN KEY (warrior_id) REFERENCES warriors (warrior_id),
